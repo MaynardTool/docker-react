@@ -3,10 +3,10 @@ services:
   docker
 
 before_install:
-  - docker build -t edidock901/docker-react -f Dockerfile.dev .
+  - docker build -t MaynardTool/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run edidock901/docker-react npm run test -- --coverage
+  - docker run MaynardTool/docker-react npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk

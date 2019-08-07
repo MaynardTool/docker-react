@@ -6,4 +6,4 @@ before_install:
   - docker build -t edidock901/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run edidock901/docker-react npm run test -- --coverage
+  - docker run -e CI=true edidock901/docker-react npm run test
